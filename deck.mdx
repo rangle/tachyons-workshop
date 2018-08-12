@@ -1,0 +1,241 @@
+export theme from './theme'
+import { Image, Appear } from 'mdx-deck'
+import { Invert, Split } from 'mdx-deck/layouts'
+import BgBlue from './BgBlue'
+import { Flex, Box } from 'grid-styled'
+
+<!--
+- What and Why of Functional CSS
+
+- Tachyons Design System and how they map to CSS classnames
+  - Typography
+  - Spacing
+  - Responsive modifiers
+  - Layout
+  - Theming
+
+- Tachyons workflow with HTML (exercises)
+
+- Tachyons + Components
+  - Challenges with extending or making components configurable ([https://github.com/winkerVSbecks/tachyons-measured#why](https://github.com/winkerVSbecks/tachyons-measured#why))
+  - Tachyons-Components
+  - Angular + Tachyons
+
+- Tools
+  + Tachyons Generator
+  + tldr
+  + pesticide
+  + https://github.com/dwyl/learn-tachyons
+  + https://tachyons.pro
+-->
+
+
+import TachyonsLogo from './TachyonsLogo'
+
+<div style={{textAlign: 'center'}}>
+  <h4 style={{marginTop: '0', marginBottom: '2em', textTransform: 'uppercase', letterSpacing: '0.1em'}}>learning</h4>
+  <TachyonsLogo style={{color: 'white', height: '8em', marginRight: '1em'}} />
+</div>
+
+---
+
+## Learning Outcomes
+
+1. Why & What of functional CSS?
+1. The Tachyons design system & API
+1. Building components with Tachyons
+
+---
+
+## 🛠 Pesticide
+
+A chrome plugin for quickly debugging css layout issues by toggling different colored outlines on every element.
+
+[pesticide.io](https://pesticide.io)
+
+---
+
+📦 Scoping (maintainability)
+
+⏱️ Performance
+
+🎨 Enforcing Design Language
+
+---
+
+<!-- <Image src="img/card-owl-ahero.png" size="75%" style={{backgroundPosition: 'left bottom', backgroundColor: '#fef582'}} /> -->
+
+export default BgBlue
+
+<Flex alignItems="center">
+  <Box width={0.4}>
+    <img style={{width: '100%', display: 'block'}} src="img/card.png" />
+  </Box>
+  <Box width={0.6} pl={5}>
+    <h1>Course<br/>Card</h1>
+  </Box>
+</Flex>
+
+---
+
+export default BgBlue
+
+<Flex mb={4} alignItems="flex-end">
+  <Box mr={6} width={256} style={{textAlign: 'right'}}>Media</Box>
+  <img style={{width: 512 * 0.5}} src="img/media.png" />
+</Flex>
+
+<Flex mb={4} alignItems="flex-end">
+  <Box mr={6} width={256} style={{textAlign: 'right'}}>Avatar</Box>
+  <img style={{width: 96 * 0.5, borderRadius: '50%'}} src="img/avatar.png" />
+</Flex>
+
+<Flex mb={4} alignItems="flex-end">
+  <Box mr={6} width={256} style={{textAlign: 'right'}}>Category</Box>
+  <img style={{width: 384 * 0.5}} src="img/category.png" />
+</Flex>
+
+<Flex mb={4} alignItems="flex-end">
+  <Box mr={6} width={256} style={{textAlign: 'right'}}>Title</Box>
+  <img style={{width: 384 * 0.5}} src="img/title.png" />
+</Flex>
+
+<Flex alignItems="flex-end">
+  <Box mr={6} width={256} style={{textAlign: 'right'}}>Count</Box>
+  <img style={{width: 384 * 0.5}} src="img/count.png" />
+</Flex>
+
+---
+
+# Scoped CSS
+
+---
+
+## BEM
+
+```html
+<div className="Card">
+  <div className="Card__Media" />
+  <img className="Card__Avatar" />
+  <h3 className="Card__Category">
+    Arts & Crafts
+  </h3>
+  <h2 className="Card__Title">
+    Wooden Materials and Sculpting Machinery
+  </h2>
+  <div className="Card__Count">22</div>
+</div>
+```
+
+---
+
+## CSS Modules
+```jsx
+import styles from './CourseCard.css';
+
+const CourseCard = () => (
+  <div className={styles.Card}>
+    <div className={styles.Media} />
+    <img className={styles.Avatar} />
+    <h3 className={styles.Category}>
+      Arts & Crafts
+    </h3>
+    <h2 className={styles.Title}>
+      Wooden Materials and Sculpting Machinery
+    </h2>
+    <div className={styles.Count}>22</div>
+  </div>
+);
+```
+
+---
+
+## Componentized
+
+```jsx
+const CourseCard = () => (
+  <Card>
+    <Media />
+    <Avatar />
+    <Category>Arts & Crafts</Category>
+    <Title>
+      Wooden Materials and Sculpting Machinery
+    </Title>
+    <Count>22</Count>
+  </Card>
+);
+```
+
+---
+
+export default Invert
+
+<Image src="img/css-workflow.png" size="50%" />
+
+---
+
+🤷🏽‍ Have to write CSS to prototype new UI
+
+📈 CSS always grows
+
+🔁 Have to keep two abstractions in sync
+
+😅 Scoping is purely convention based
+
+---
+
+export default Invert
+
+<Image src="img/tachyons-workflow.png" size="50%" />
+
+---
+
+You are the design system author. Your users are other developers.
+
+Don't make your users write CSS. Let them compose components.
+
+---
+
+🙌🏽 Removes the mapping between components and CSS class names
+
+📦 Components as a low-level styling construct
+
+🤝 Designers can create a shared language with developers
+
+---
+
+# Tachyons
+# Design System
+
+---
+
+Design systems are
+## Rules, Principles & Constraints
+## Implemented In Design Code
+
+---
+
+Component Based Design System
+
+---
+
+export default Invert
+
+## Tachyons Design Constraints
+
+![](img/tachyons-design-system.gif)
+
+---
+
+# Tachyons Workflow
+
+---
+
+https://codepen.io/winkerVSbecks/pen/djNGbP?editors=0100
+https://codepen.io/winkerVSbecks/pen/ZjXMZy
+
+---
+
+### Thanks!
+
+[github.com/rangle/tachyons-workshop](https://github.com/rangle/tachyons-workshop)

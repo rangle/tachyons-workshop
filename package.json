@@ -1,0 +1,20 @@
+{
+  "name": "tachyons-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "mdx-deck --title 'Tachyons CSS Workshop' deck.mdx",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "mdx-deck": "^1.5.15"
+  },
+  "dependencies": {
+    "grid-styled": "^5.0.2",
+    "superbox": "^2.1.0"
+  }
+}
