@@ -1,8 +1,9 @@
-export theme from './theme'
 import { Image, Appear } from 'mdx-deck'
 import { Invert, Split } from 'mdx-deck/layouts'
-import BgBlue from './BgBlue'
 import { Flex, Box } from 'grid-styled'
+export theme from './theme'
+import BgBlue from './BgBlue'
+import BrowserChrome from './BrowserChrome'
 
 <!--
 - What and Why of Functional CSS
@@ -174,6 +175,8 @@ export default Invert
 
 ---
 
+# Challenges
+
 🤷🏽‍ Have to write CSS to prototype new UI
 
 📈 CSS always grows
@@ -184,28 +187,40 @@ export default Invert
 
 ---
 
+# Functional CSS
+
+---
+
+<Flex alignItems="stretch" style={{width: '100vw', height: '100vh'}}>
+  <Box width={0.5} style={{backgroundImage: 'url("img/owltypescale.png")', backgroundSize: 'cover'}} />
+  <Box width={0.5} style={{backgroundImage: 'url("img/owl-color-1.png")', backgroundSize: 'cover'}} />
+</Flex>
+
+---
+
+export default Invert
+
+<Image src="img/tachyons.io.png" size="50%" />
+
+---
+
+## Tachyons Classes
+
+😇 Functional
+
+🎹 Composable
+
+💎 Immutable
+
+---
+
+<Image src="img/stats.jpg" size="50%" style={{backgroundColor: '#000'}} />
+
+---
+
 export default Invert
 
 <Image src="img/tachyons-workflow.png" size="50%" />
-
----
-
-You are the design system author. Your users are other developers.
-
-Don't make your users write CSS. Let them compose components.
-
----
-
-🙌🏽 Removes the mapping between components and CSS class names
-
-📦 Components as a low-level styling construct
-
-🤝 Designers can create a shared language with developers
-
----
-
-# Tachyons
-# Design System
 
 ---
 
@@ -215,19 +230,100 @@ Design systems are
 
 ---
 
-Component Based Design System
+<Flex alignItems="center">
+  <BrowserChrome>
+    <img src="img/tachyons-design-system.gif" style={{width: 500, display: 'block'}} />
+  </BrowserChrome>
+  <Box ml={5}>
+    <h1 style={{lineHeight: 1.25}}>Tachyons<br/>Design System</h1>
+  </Box>
+</Flex>
 
 ---
 
-export default Invert
+**[Typography](http://tachyons.io/docs/typography/scale)**<br/>
+Font size, weight, style, line height & alignment
 
-## Tachyons Design Constraints
+**[Layout](http://tachyons.io/docs/layout/spacing)**<br/>
+Padding, margin, width, height, display & position
 
-![](img/tachyons-design-system.gif)
+**[Theming](http://tachyons.io/docs/themes/skins/)**<br/>
+Text, background & border Color, Opacity & hovers
+
+---
+
+## Responsive modifiers
+
+<Flex mt={5} flexWrap="wrap" style={{textAlign: 'center', fontSize: '2em', fontWeight: 900}}>
+  <Box width={1} p={3} mb={3} bg="white" color="background">ns</Box>
+  <Box flex="1 1 auto" mr={2} p={3} bg="white" color="background">m</Box>
+  <Box flex="1 1 auto" ml={2} p={3} bg="white" color="background">l</Box>
+</Flex>
+
+---
+
+# [tachyons-tldr.now.sh](https://tachyons-tldr.now.sh/#/scales)
+
+---
+
+###### 🛠️ TOOLS
+
+Customize with<br/>
+[tachyons-css/generator](https://github.com/tachyons-css/generator)
+
+Extend with<br/>
+[tachyons-tldr.now.sh/#/tools](https://tachyons-tldr.now.sh/#/tools)
 
 ---
 
 # Tachyons Workflow
+
+---
+
+```jsx
+const Title = props => (
+  <h2
+    className="rubik fw5 f5 black tc lh-copy ph3 mb3"
+    {...props}
+  />
+);
+
+
+const Category = props => (
+  <h3
+    className="rubik fw4 f7 ttu tracked blue tc mt0 mb3"
+    {...props}
+  />
+);
+```
+
+---
+
+```jsx
+import styled from 'tachyons-components';
+
+
+const Title = styled('h2')`
+  rubik fw5 f5 black tc lh-copy ph3
+`;
+
+
+const Category = styled('h3')`
+  rubik fw4 f7 ttu tracked blue tc mt0
+`;
+```
+
+---
+
+```jsx
+<div>
+  <Title mb3>Arts & Crafts</Title>
+
+  <Category mb3>
+    Wooden Materials and Sculpting Machinery
+  </Category>
+</div>
+```
 
 ---
 
