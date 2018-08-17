@@ -273,7 +273,7 @@ export default Split
 />
 
 ### Exercise 1
-[CodePen Template](https://codepen.io/winkerVSbecks/pen/QBoKpx?editors=1000)
+[CodePen Template](https://codepen.io/winkerVSbecks/pen/djxqpj?editors=1000)
 
 ---
 
@@ -293,7 +293,7 @@ export default Split
 />
 
 ### Exercise 2
-[CodePen Template](https://codepen.io/winkerVSbecks/pen/QBoKpx?editors=1000)
+[CodePen Template](https://codepen.io/winkerVSbecks/pen/YjmONR)
 
 ---
 
@@ -305,7 +305,13 @@ export default Split
 />
 
 ### Exercise 3
-[CodePen Template](https://codepen.io/winkerVSbecks/pen/QBoKpx?editors=1000)
+[CodePen Template](https://codepen.io/winkerVSbecks/pen/ZjgMJK)
+
+---
+
+### Exercise Solution
+
+[codepen.io/winkerVSbecks/pen/QBoKpx](https://codepen.io/winkerVSbecks/pen/QBoKpx?editors=1000)
 
 ---
 
@@ -326,32 +332,26 @@ Tachyons Design System Components
 ---
 
 ```jsx
-const Title = props => (
+const Title = ({className, ...props}) => (
   <h2
-    className="rubik fw5 f5 black tc lh-copy ph3 mb3"
-    {...props}
-  />
-);
-
-
-const Category = props => (
-  <h3
-    className="rubik fw4 f7 ttu tracked blue tc mt0 mb3"
+    className={`rubik fw5 f5 black tc lh-copy ph3 mb3 ${className}`}
     {...props}
   />
 );
 ```
 
+[Tachyons + Components challenges](https://github.com/winkerVSbecks/tachyons-measured#why)
+
 ---
 
 ```jsx
 import styled from 'tachyons-components';
-
-
+/**
+ * Create and style components with tachyons
+ */
 const Title = styled('h2')`
   rubik fw5 f5 black tc lh-copy ph3
 `;
-
 
 const Category = styled('h3')`
   rubik fw4 f7 ttu tracked blue tc mt0
@@ -372,9 +372,9 @@ const Category = styled('h3')`
 
 ---
 
-https://codepen.io/winkerVSbecks/pen/djNGbP?editors=0100
-https://codepen.io/winkerVSbecks/pen/ZjXMZy
-https://codepen.io/winkerVSbecks/pen/QBRNKZ?editors=1000
++ https://codepen.io/winkerVSbecks/pen/djNGbP?editors=0100
++ https://codepen.io/winkerVSbecks/pen/ZjXMZy
++ https://codepen.io/winkerVSbecks/pen/QBRNKZ?editors=1000
 
 ---
 
@@ -389,7 +389,7 @@ export default Split
 
 # Angular
 
-[msrd POC](https://github.com/rangle/msrd)
+[Angular msrd (poc)](https://github.com/rangle/msrd)
 
 ```html
 <a class="br3"
