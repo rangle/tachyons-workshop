@@ -4,33 +4,6 @@ import { Flex, Box } from 'grid-styled'
 export theme from './theme'
 import BgBlue from './BgBlue'
 import BrowserChrome from './BrowserChrome'
-
-<!--
-- What and Why of Functional CSS
-
-- Tachyons Design System and how they map to CSS classnames
-  - Typography
-  - Spacing
-  - Responsive modifiers
-  - Layout
-  - Theming
-
-- Tachyons workflow with HTML (exercises)
-
-- Tachyons + Components
-  - Challenges with extending or making components configurable ([https://github.com/winkerVSbecks/tachyons-measured#why](https://github.com/winkerVSbecks/tachyons-measured#why))
-  - Tachyons-Components
-  - Angular + Tachyons
-
-- Tools
-  + Tachyons Generator
-  + tldr
-  + pesticide
-  + https://github.com/dwyl/learn-tachyons
-  + https://tachyons.pro
--->
-
-
 import TachyonsLogo from './TachyonsLogo'
 
 <div style={{textAlign: 'center'}}>
@@ -325,13 +298,66 @@ Extend with<br/>
 
 ---
 
-Tachyons Design System Components
-
-## Props 🔀 Design System ➡️ className
+# Components With Tachyons
 
 ---
 
-### [Tachyons + Components Challenges](https://github.com/winkerVSbecks/tachyons-measured#why)
+## Tachyons Components With Angular
+
+---
+
+```js
+// Heading
+@Directive({
+  selector: '[appHeading]',
+  host: { class: 'helvetica-neue black lh-title' },
+})
+export class HeadingDirective {}
+
+// Text
+@Directive({
+  selector: '[appText]',
+  host: { class: 'helvetica-neue black lh-copy' },
+})
+export class TextDirective {}
+```
+
+---
+
+```html
+<a appBlockLink class="mb2" href="#">
+  <h2 appHeading class="black f4 mv0">
+    The Super Pack
+  </h2>
+  <p appText class="black mv0 fw3 f6">
+    all three serums
+  </p>
+</a>
+```
+
+Full example: [codesandbox.io/s/ql3qxp3xq9](https://codesandbox.io/s/ql3qxp3xq9)
+
+---
+
+[Angular msrd (poc)](https://github.com/rangle/msrd)
+
+```html
+<a class="br3"
+  f="6" fw="3"
+  ph="3" pv="2" mb="2"
+  clr="white" bg="purple"
+  href="#0">
+  Button Text
+</a>
+```
+
+---
+
+## Tachyons Components With React
+
+---
+
+### [Tachyons + React Components Challenges](https://github.com/winkerVSbecks/tachyons-measured#why)
 
 <iframe
   height='500'
@@ -386,36 +412,21 @@ export default Split
 
 ---
 
-# Angular
-
-[Angular msrd (poc)](https://github.com/rangle/msrd)
-
-```html
-<a class="br3"
-  f="6" fw="3"
-  ph="3" pv="2" mb="2"
-  clr="white" bg="purple"
-  href="#0">
-  Button Text
-</a>
-```
-
----
-
 # More Layout Examples
 
-+ [GU Layout](https://codepen.io/winkerVSbecks/pen/ZjXMZy)
-+ [CSS Grid Experiments](https://codepen.io/collection/nZBOPV)
-+ [User Marquee](https://codepen.io/winkerVSbecks/pen/odBaNq)
-+ [Address Book](https://codepen.io/winkerVSbecks/pen/oPvxLR)
+* [GU Layout](https://codepen.io/winkerVSbecks/pen/ZjXMZy)
+* [CSS Grid Experiments](https://codepen.io/collection/nZBOPV)
+* [User Marquee](https://codepen.io/winkerVSbecks/pen/odBaNq)
+* [Address Book](https://codepen.io/winkerVSbecks/pen/oPvxLR)
 
 ---
 
 # Additional Learning Resources
 
-- [dwyl — Learn Tachyons](https://github.com/dwyl/learn-tachyons)
-- [A Tachyons CSS Reading List](https://notebook.hongkonggong.com/2017/12/11/a-tachyons-css-reading-list/)
-- [Component Based Design System With Tachyons](https://varun.ca/tachyons-components/)
+* [dwyl — Learn Tachyons](https://github.com/dwyl/learn-tachyons)
+* [tachyons.pro](https://tachyons.pro)
+* [A Tachyons CSS Reading List](https://notebook.hongkonggong.com/2017/12/11/a-tachyons-css-reading-list/)
+* [Component Based Design System With Tachyons](https://varun.ca/tachyons-components/)
 
 ---
 
