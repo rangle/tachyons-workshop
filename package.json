@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "mdx-deck --title 'Tachyons CSS Workshop' deck.mdx",
+    "build": "mdx-deck build --title 'Tachyons CSS Workshop' deck.mdx",
+    "predeploy": "cp -r img dist/img",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,6 +17,7 @@
     "mdx-deck": "^1.5.15"
   },
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "grid-styled": "^5.0.2",
     "superbox": "^2.1.0"
   }
