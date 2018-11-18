@@ -3,6 +3,7 @@ import { Invert, Split, FullScreenCode } from 'mdx-deck/layouts'
 import { Flex, Box } from 'grid-styled'
 export theme from './theme'
 import BgBlue from './BgBlue'
+import FullWidth from './FullWidth'
 import BrowserChrome from './BrowserChrome'
 import TachyonsLogo from './TachyonsLogo'
 
@@ -147,12 +148,6 @@ const CourseCard = () => (
 
 ---
 
-export default Invert
-
-<Image src="img/css-workflow.png" size="50%" />
-
----
-
 # Challenges
 
 🤷🏽‍ Have to write CSS to prototype new UI
@@ -165,7 +160,14 @@ export default Invert
 
 ---
 
-# [The Evolution of<br/>CSS & UI Architecture](https://www.notion.so/rangle/The-Evolution-of-CSS-UI-Architecture-2291e1c572d0458ea6eac47a3071f686)
+export default Invert
+
+<Image src="img/css-workflow.png" size="50%" />
+
+---
+
+
+# 📚 [The Evolution of<br/>CSS & UI Architecture](https://www.notion.so/rangle/The-Evolution-of-CSS-UI-Architecture-2291e1c572d0458ea6eac47a3071f686)
 
 ---
 
@@ -212,7 +214,7 @@ export default Invert
   </BrowserChrome>
   <Box ml={5}>
     <p style={{ fontSize: '0.75em', marginTop: 0 }}>Design systems are</p>
-    <p style={{ marginBottom: 0 }}>Rules, Principles & Constraints<br/>Implemented In Design Code</p>
+    <p style={{ marginBottom: 0 }}>Rules, Principles & Constraints<br/>Implemented In Design & Code</p>
   </Box>
 </Flex>
 
@@ -301,69 +303,13 @@ Customize with<br/>
 Extend with<br/>
 [tachyons-tldr.now.sh/#/tools](https://tachyons-tldr.now.sh/#/tools)
 
-More Customizable Alternative<br/>
-[Tailwind](https://tailwindcss.com/docs/what-is-tailwind)
-
----
-
-## Components With Tachyons + Angular
-
----
-
-### Styled Directives
-
-```js
-// Heading
-@Directive({
-  selector: '[appHeading]',
-  host: { class: 'helvetica-neue black lh-title' },
-})
-export class HeadingDirective {}
-
-// Text
-@Directive({
-  selector: '[appText]',
-  host: { class: 'helvetica-neue black lh-copy' },
-})
-export class TextDirective {}
-```
-
----
-
-```html
-<a appBlockLink class="mb2" href="#">
-  <h2 appHeading class="black f4 mv0">
-    The Super Pack
-  </h2>
-  <p appText class="black mv0 fw3 f6">
-    all three serums
-  </p>
-</a>
-```
-
-Full example: [codesandbox.io/s/ql3qxp3xq9](https://codesandbox.io/s/ql3qxp3xq9)
-
----
-
-### Design System Directives
-
-[Angular msrd (poc)](https://github.com/rangle/msrd)
-
-```html
-<a class="br3"
-  f="6" fw="3"
-  ph="3" pv="2" mb="2"
-  clr="white" bg="purple"
-  href="#0">
-  Button Text
-</a>
-```
-
 ---
 
 ## Components With Tachyons + React
 
 ---
+
+export default FullWidth
 
 ### [Tachyons + React Components Challenges](https://github.com/winkerVSbecks/tachyons-measured#why)
 
@@ -371,10 +317,10 @@ Full example: [codesandbox.io/s/ql3qxp3xq9](https://codesandbox.io/s/ql3qxp3xq9)
   height='500'
   scrolling='no'
   title='KxPVjm'
-  src='//codepen.io/winkerVSbecks/embed/KxPVjm/?height=500&theme-id=light&default-tab=js,result&embed-version=2&editable=true'
+  src='//codepen.io/winkerVSbecks/embed/KxPVjm/?height=500&theme-id=26435&default-tab=js,result&embed-version=2&editable=true'
   frameBorder='no'
   allowtransparency='true'
-  allowFullScreen='true'
+  allowFullScreen={true}
   style={{ width: '100%', outline: 'none' }}>
 </iframe>
 
@@ -421,7 +367,74 @@ export default Split
 
 ---
 
-# More Layout Examples
+## Components With Tachyons + Angular
+
+---
+
+### Styled Directives
+
+```js
+// Heading
+@Directive({
+  selector: '[appHeading]',
+  host: { class: 'helvetica-neue black lh-title' },
+})
+export class HeadingDirective {}
+
+// Text
+@Directive({
+  selector: '[appText]',
+  host: { class: 'helvetica-neue black lh-copy' },
+})
+export class TextDirective {}
+```
+
+---
+
+```html
+<a appBlockLink class="mb2" href="#">
+  <h2 appHeading class="black f4 mv0">
+    The Super Pack
+  </h2>
+  <p appText class="black mv0 fw3 f6">
+    all three serums
+  </p>
+</a>
+```
+
+Full example: [codesandbox.io/s/ql3qxp3xq9](https://codesandbox.io/s/ql3qxp3xq9)
+
+<!-- ---
+
+### Design System Directives
+
+[Angular msrd (poc)](https://github.com/rangle/msrd)
+
+```html
+<a class="br3"
+  f="6" fw="3"
+  ph="3" pv="2" mb="2"
+  clr="white" bg="purple"
+  href="#0">
+  Button Text
+</a>
+``` -->
+
+---
+
+# Next Steps
+
+---
+
+## Other Functional CSS Libraries
+
+* [Tailwind](https://tailwindcss.com/docs/what-is-tailwind)
+* [Basscss](http://basscss.com)
+* [Solid](https://solid.buzzfeed.com)
+
+---
+
+## More Layout Examples
 
 * [GU Layout](https://codepen.io/winkerVSbecks/pen/ZjXMZy)
 * [CSS Grid Experiments](https://codepen.io/collection/nZBOPV)
@@ -439,6 +452,6 @@ export default Split
 
 ---
 
-# Thanks!
+# Thank You!
 
 [github.com/rangle/tachyons-workshop](https://github.com/rangle/tachyons-workshop)
