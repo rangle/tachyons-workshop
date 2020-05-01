@@ -8,7 +8,9 @@
     "build": "mdx-deck build --title 'Tachyons CSS Workshop' deck.mdx",
     "predeploy": "cp -r img dist/img",
     "deploy": "gh-pages -d dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,8 @@
   "dependencies": {
     "gh-pages": "^1.2.0",
     "grid-styled": "^5.0.2",
-    "superbox": "^2.1.0"
-  }
+    "superbox": "^2.1.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
